@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .login-container {
+    text-align: center;
+    margin: 100px auto;
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button id="login-button">Login</button>
+       
+    </div>
+    
+    <script>
+        document.getElementById('login-button').addEventListener('click', function() {
+    // Display the loader and hide the login button
+    document.getElementById('loader').style.display = 'block';
+    this.style.display = 'none';
+
+    // Simulate a loading process (e.g., send request to server)
+    setTimeout(function() {
+        // Hide the loader and show the login button again
+        document.getElementById('loader').style.display = 'none';
+        document.getElementById('login-button').style.display = 'block';
+
+        // Display a success message (you can customize this)
+        alert('Login successful');
+    }, 2000); // Simulate 2 seconds loading time
+});
+
+    </script>
+</body>
+</html>

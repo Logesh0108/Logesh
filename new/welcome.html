@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        /* Styles for the welcome page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color:orange;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .welcome-container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #ffffff;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+        a{
+            text-decoration: none;
+            font-family:cursive;
+            color: rgb(255, 0, 0);
+        }
+        a:hover{
+            color: green;
+            transition-duration: 2s;
+        }
+        .dark-mode {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+        }
+        /* Styles for the button */
+        .float-end {
+            border-radius: 8px;;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: transparent;
+            border: none;
+            color: rgb(255, 5, 5);
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            outline: none;
+            z-index: 1;
+            box-shadow: 0 2px 5px rgba(47, 46, 46, 0.5);
+        }
+        .float-end:hover {
+            animation: glowing .5s infinite;
+        }
+        @keyframes glowing {
+             0% {
+                box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+             }
+             50% {
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+             }
+             100% {
+                box-shadow: 0 0 5px rgba(94, 87, 87, 0.5);
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <button class="float-end" onclick="myFunction()">Dark mode</button>
+
+    <div class="welcome-container">
+        <h1>Welcome to Our Website!</h1>
+        <p>You have successfully logged in.</p>
+        <a href="welcome.html">Click Here</a>
+    </div>
+    
+
+
+
+
+
+
+
+    <script>
+        $('#user-registration').validation({
+        'autocomplete': 'off',
+        'liveValidation': false
+        });
+        function myFunction() {
+     var element = document.body;
+     element.classList.toggle("dark-mode");}
+      </script>
+</body>
+</html>
+        
